@@ -1,3 +1,14 @@
-spec:
-  destination:
-    server: https://kubernetes.default.svc
+k8s:
+  spec:
+    destination:
+      server: https://kubernetes.default.svc
+
+istio:
+  spec:
+    source:
+      url: https://istio-release.storage.googleapis.com/charts/
+
+elk:
+  spec:
+    source:
+      url: https://helm.elastic.co/
