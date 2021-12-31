@@ -12,5 +12,11 @@ spec:
   project: default
   source:
     chart: eck-operator-crds
-    repoURL: {{ .Values.istio.spec.source.url }}
-    targetRevision: HEAD
+    repoURL: {{ .Values.elk.spec.source.url }}
+    targetRevision: 1.9.1
+  syncPolicy:
+    automated:
+      prune: true
+      allowEmpty: true
+    syncOptions:
+      - ApplyOutOfSyncOnly=true
